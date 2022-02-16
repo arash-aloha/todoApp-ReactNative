@@ -1,17 +1,21 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { MaterialIcons } from '@expo/vector-icons';
 
 const Task = ({ item, pressHandler }) => {
   return (
     <TouchableOpacity
       style={styles.item}
-      onPress={() => pressHandler(item.key)}
+      onPress={() => pressHandler(item.id)}
     >
       <View style={styles.itemLeft}>
         <View style={styles.square}></View>
         <Text style={styles.itemText}> {item.text} </Text>
       </View>
-      <View style={styles.circular}></View>
+      <MaterialIcons 
+        name="check-box-outline-blank" size={24} color="black" 
+      />
+
     </TouchableOpacity>
   );
 };
@@ -32,25 +36,22 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     flexWrap: "wrap",
-    backgroundColor: "gray",
     padding: 5,
   },
   square: {
-    backgroundColor: "#333",
-    width: 24,
-    height: 24,
-    opacity: 0.4,
-    borderRadius: 10,
-    marginRight: 15,
-  },
-  itemText: {
-    maxWidth: "80%",
-  },
-  circular: {
+    backgroundColor: "#EEAB50",
     width: 12,
     height: 12,
-    borderColor: "#09DCAC",
-    borderWidth: 2,
     borderRadius: 10,
+    marginRight: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  itemText: {
+    fontFamily: 'poppins-regular',
+    fontSize: 20,
+    maxWidth: 200,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

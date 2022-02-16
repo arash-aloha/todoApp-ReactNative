@@ -11,6 +11,7 @@ export default function Header() {
 
 const styles = StyleSheet.create({
   header: {
+    marginVertical: 10,
     marginBottom: 40,
     borderBottomWidth: 2,
     borderBottomColor: "grey",
@@ -23,5 +24,8 @@ const styles = StyleSheet.create({
     textShadowColor: "#FFD194",
     textShadowOffset: { width: 1.5, height: 1.5 },
     textShadowRadius: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 150
   },
 });
