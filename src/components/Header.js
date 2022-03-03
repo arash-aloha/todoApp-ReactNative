@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     marginBottom: 40,
     borderBottomWidth: 2,
     borderBottomColor: "grey",
+    
   },
   title: {
     fontFamily: "poppins-black",

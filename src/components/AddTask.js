@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   TextInput,
   KeyboardAvoidingView,
+  Platform
 } from "react-native";
 
 export default function AddTask({ handleAddTask }) {
@@ -15,7 +16,6 @@ export default function AddTask({ handleAddTask }) {
     setText(value);
   };
   
-
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={styles.keyboard}>

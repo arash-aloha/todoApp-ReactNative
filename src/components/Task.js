@@ -5,11 +5,11 @@ import { MaterialIcons } from '@expo/vector-icons';
 const Task = ({ item, pressHandler }) => {
   return (
     <TouchableOpacity
-      style={styles.item}
+      style={styles.container}
       onPress={() => pressHandler(item.id)}
     >
       <View style={styles.itemLeft}>
-        <View style={styles.square}></View>
+        <View style={styles.circle}></View>
         <Text style={styles.itemText}> {item.text} </Text>
       </View>
       <MaterialIcons 
@@ -23,7 +23,7 @@ const Task = ({ item, pressHandler }) => {
 export default Task;
 
 const styles = StyleSheet.create({
-  item: {
+  container: {
     backgroundColor: "#fff",
     padding: 10,
     borderRadius: 10,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     padding: 5,
   },
-  square: {
+  circle: {
     backgroundColor: "#EEAB50",
     width: 12,
     height: 12,

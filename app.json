@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "todoApp",
-    "slug": "todoApp",
+    "name": "todosApp",
+    "slug": "todosApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "",
+    "icon": "./src/assets/img/icon.png",
     "splash": {
-      "image": "",
-      "resizeMode": "contain",
+      "image": "./src/assets/img/splashscreen.png",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -21,12 +21,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "",
+        "foregroundImage": "./src/assets/img/icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": ""
+      "favicon": "./src/assets/img/icon.png"
     }
   }
 }

@@ -1,3 +1,4 @@
+// import 'react-native-gesture-handler';
 import React, { useState } from "react";
 import {
   FlatList,
@@ -9,11 +10,15 @@ import {
   Keyboard
 } from "react-native";
 
+// import { createDrawerNavigator } from '@react-navigation/drawer';
+// import { NavigationContainer } from '@react-navigation/native';
+
 import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
 import Task from "./src/components/Task";
 import Header from "./src/components/Header";
 import AddTask from "./src/components/AddTask";
+
 
 export const getFonts = () => {
   return Font.loadAsync({
@@ -24,6 +29,7 @@ export const getFonts = () => {
 };
 
 export default function App() {
+  
   const [fontsLoaded, setFontsLoaded] = useState(false);
   const [taskItems, setTaskItems] = useState([
     { text: "finish the app", id: "1" },
@@ -110,7 +116,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "grey",
     flex: 1,
-    // maxHeight: '60%'
+    maxHeight: '60%',
   },
   items: {
     flex: 1,
